@@ -1,0 +1,80 @@
+[
+    {
+        "name": "Virgin Islands (U.S.)",
+        "alpha-2": "VI",
+        "alpha-3": "VIR",
+        "country-code": "850",
+        "iso_3166-2": "ISO 3166-2:VI",
+        "region": "Americas",
+        "sub-region": "Latin America and the Caribbean",
+        "intermediate-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "419",
+        "intermediate-region-code": "029"
+    },
+    {
+        "name": "Wallis and Futuna",
+        "alpha-2": "WF",
+        "alpha-3": "WLF",
+        "country-code": "876",
+        "iso_3166-2": "ISO 3166-2:WF",
+        "region": "Oceania",
+        "sub-region": "Polynesia",
+        "intermediate-region": "",
+        "region-code": "009",
+        "sub-region-code": "061",
+        "intermediate-region-code": ""
+    },
+    {
+        "name": "Western Sahara",
+        "alpha-2": "EH",
+        "alpha-3": "ESH",
+        "country-code": "732",
+        "iso_3166-2": "ISO 3166-2:EH",
+        "region": "Africa",
+        "sub-region": "Northern Africa",
+        "intermediate-region": "",
+        "region-code": "002",
+        "sub-region-code": "015",
+        "intermediate-region-code": ""
+    },
+    {
+        "name": "Yemen",
+        "alpha-2": "YE",
+        "alpha-3": "YEM",
+        "country-code": "887",
+        "iso_3166-2": "ISO 3166-2:YE",
+        "region": "Asia",
+        "sub-region": "Western Asia",
+        "intermediate-region": "",
+        "region-code": "142",
+        "sub-region-code": "145",
+        "intermediate-region-code": ""
+    },
+    {
+        "name": "Zambia",
+        "alpha-2": "ZM",
+        "alpha-3": "ZMB",
+        "country-code": "894",
+        "iso_3166-2": "ISO 3166-2:ZM",
+        "region": "Africa",
+        "sub-region": "Sub-Saharan Africa",
+        "intermediate-region": "Eastern Africa",
+        "region-code": "002",
+        "sub-region-code": "202",
+        "intermediate-region-code": "014"
+    },
+    {
+        "name": "Zimbabwe",
+        "alpha-2": "ZW",
+        "alpha-3": "ZWE",
+        "country-code": "716",
+        "iso_3166-2": "ISO 3166-2:ZW",
+        "region": "Africa",
+        "sub-region": "Sub-Saharan Africa",
+        "intermediate-region": "Eastern Africa",
+        "region-code": "002",
+        "sub-region-code": "202",
+        "intermediate-region-code": "014"
+    }
+]

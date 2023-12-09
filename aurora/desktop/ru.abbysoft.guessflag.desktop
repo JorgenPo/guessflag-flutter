@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=guessflag
+Comment=A new Flutter project.
+Icon=ru.abbysoft.guessflag
+Exec=/usr/bin/ru.abbysoft.guessflag
+X-Nemo-Application-Type=silica-qt5
+
+[X-Application]
+Permissions=
+OrganizationName=ru.abbysoft
+ApplicationName=guessflag
