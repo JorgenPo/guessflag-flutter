@@ -1,0 +1,11 @@
+{
+    "guessFlag": "Угадай флаг",
+    "randomMode": "Случайный режим",
+    "headerStats": "{correct}/{total} угадано ({percent}% правильно)",
+    "gameOver": "Конец игры",
+    "resetProgressAndPlayAgain": "Сбросить прогресс и играть сначала",
+    "results": "Вы угадали все {numberOfCountries} страны с {correctPercentage}% правильных ответов",
+    "whatCountryFlag": "Флаг какой страны вы видите?",
+    "youAreRight": "Вы правы! Это в самом деле {actualAnswer}",
+    "youAreWrong": "Неверно! Это {correctAnswer}"
+}

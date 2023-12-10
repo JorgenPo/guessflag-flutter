@@ -3,25 +3,26 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:guessflag/model/game_model.dart';
 import 'package:guessflag/pages/widgets.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class GuessPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBar(),
+      appBar: appBar(context),
       body: body(),
       backgroundColor: const Color.fromARGB(255, 250, 250, 250),
     );
   }
 
-  AppBar appBar() {
+  AppBar appBar(BuildContext context) {
     return AppBar(
       leading: Container(
         alignment: Alignment.centerLeft,
         padding: const EdgeInsets.all(8.0),
-        child: const Text(
-          "Random mode",
-          style: TextStyle(color: Colors.white),
+        child: Text(
+          AppLocalizations.of(context)!.randomMode,
+          style: const TextStyle(color: Colors.white),
         ),
       ),
       actions: [
@@ -30,7 +31,8 @@ class GuessPage extends StatelessWidget {
             child: Consumer<StatisticsModel>(builder:
                 (BuildContext context, StatisticsModel stats, Widget? child) {
               return Text(
-                "${stats.correctAnswers.length} of ${stats.numberOfCountries} countries guessed (${stats.getCorrectPercentage()}% correct)",
+                AppLocalizations.of(context)!.headerStats(
+                  stats.correctAnswers.length, stats.getCorrectPercentage(), stats.numberOfCountries),
                 style: const TextStyle(color: Colors.white),
               );
             }))

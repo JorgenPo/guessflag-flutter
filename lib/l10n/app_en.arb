@@ -1,0 +1,11 @@
+{
+    "guessFlag": "Guess flag",
+    "randomMode": "Random mode",
+    "headerStats": "{correct}/{total} guessed ({percent}% correct)",
+    "gameOver": "Game over",
+    "resetProgressAndPlayAgain": "Reset progress and play again",
+    "results": "You guessed all {numberOfCountries} countries with {correctPercentage}% correct answers",
+    "whatCountryFlag": "What country flag is that?",
+    "youAreRight": "You are right! This is indeed {actualAnswer}",
+    "youAreWrong": "You are wrong! This is {correctAnswer}"
+}

@@ -1,6 +1,8 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:guessflag/model/game_model.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class OptionButton extends StatelessWidget {
   final String text;
@@ -19,17 +21,17 @@ class OptionButton extends StatelessWidget {
       };
     }
 
-    return SizedBox(
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
       child: ElevatedButton(
           onPressed: callback,
           style: ElevatedButton.styleFrom(
               backgroundColor: const Color.fromARGB(255, 96, 125, 139)),
-          child: FittedBox(
-            fit: BoxFit.scaleDown,
-            child: Text(
-              text,
-              style: const TextStyle(fontSize: 20, color: Colors.white),
-            ),
+          child: AutoSizeText(
+            text,
+            maxLines: 2,
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontSize: 20, color: Colors.white),
           )),
     );
   }
@@ -47,25 +49,36 @@ class Options extends StatelessWidget {
         (BuildContext context, RoundResultsModel results, Widget? child) {
       return Column(
         mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              OptionButton(options[0].name,
-                  onAnswered: results.hasResults() ? null : onAnswered),
-              OptionButton(options[1].name,
-                  onAnswered: results.hasResults() ? null : onAnswered)
-            ],
+          Expanded(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Expanded(
+                  child: OptionButton(options[0].name,
+                      onAnswered: results.hasResults() ? null : onAnswered),
+                ),
+                Expanded(
+                  child: OptionButton(options[1].name,
+                      onAnswered: results.hasResults() ? null : onAnswered),
+                )
+              ],
+            ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              OptionButton(options[2].name,
-                  onAnswered: results.hasResults() ? null : onAnswered),
-              OptionButton(options[3].name,
-                  onAnswered: results.hasResults() ? null : onAnswered)
-            ],
+          Expanded(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Expanded(
+                  child: OptionButton(options[2].name,
+                      onAnswered: results.hasResults() ? null : onAnswered),
+                ),
+                Expanded(
+                  child: OptionButton(options[3].name,
+                      onAnswered: results.hasResults() ? null : onAnswered),
+                )
+              ],
+            ),
           )
         ],
       );
@@ -83,22 +96,26 @@ class CurrentRoundText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String text = "What country flag is that?";
+    String text = AppLocalizations.of(context)!.whatCountryFlag;
     Color color = Colors.black;
 
     if (results.hasResults()) {
       if (results.wasLastAnswerCorrect()) {
-        text = "You are right! This is indeed ${results.actualAnswer}";
+        text = AppLocalizations.of(context)!.youAreRight(results.actualAnswer);
         color = Colors.green;
       } else {
-        text = "You are wrong! This is ${results.correctAnswer}";
+        text = AppLocalizations.of(context)!.youAreWrong(results.correctAnswer);
         color = Colors.red;
       }
     }
 
-    return Text(
-      text,
-      style: TextStyle(fontSize: 30, color: color),
+    return Center(
+      child: AutoSizeText(
+        text,
+        maxLines: 2,
+        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: 30, color: color),
+      ),
     );
   }
 }

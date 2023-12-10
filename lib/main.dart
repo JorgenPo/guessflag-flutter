@@ -4,6 +4,7 @@ import 'package:guessflag/pages/game_over_page.dart';
 import 'package:guessflag/pages/guess_page.dart';
 import 'package:guessflag/pages/splash_page.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() {
   runApp(const MyApp());
@@ -51,6 +52,8 @@ class _MyAppState extends State<MyApp> {
         useMaterial3: true,
       ),
       home: homeScreen(),
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
       debugShowCheckedModeBanner: false,
     );
   }
